@@ -12,9 +12,9 @@ class TaskController extends Controller
     {
 
 	   //$tasks = DB::table('tasks')->get();
-		$tasks = Task::all();
+		$tasks = Task::latest()->get();
 
-		return view('Information',compact('tasks'));
+		return view('about',compact('tasks'));
 
     }
 
