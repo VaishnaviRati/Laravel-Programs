@@ -18,7 +18,9 @@ Route::get('/info','TaskController@index');
 
 Route::get('/info/{task}','TaskController@show');
 
+Route::get('/posts/show','TaskController@shown');
 
+Route::post('/posts','TaskController@store');
 
 
 
