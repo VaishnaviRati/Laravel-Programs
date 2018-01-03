@@ -12,4 +12,9 @@ class Task extends Model
     {
     	return Task::where('completed','1')->get();
     }
+
+    public function comments()
+    {
+    	return $this->hasMany(Comment::class);
+    }
 }
